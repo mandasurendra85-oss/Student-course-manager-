@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Edu Prototype — Student Course Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🎓 Student &amp; Course Manager</h1>
+  <p>A full-stack Java prototype (Spring Boot + REST API + H2 database)</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Students</h2>
+    <form id="studentForm">
+      <input type="text" id="studentName" placeholder="Full name" required>
+      <input type="email" id="studentEmail" placeholder="Email" required>
+      <input type="text" id="studentPhone" placeholder="Phone">
+      <button type="submit">Add Student</button>
+    </form>
+    <table id="studentTable">
+      <thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th></th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Courses</h2>
+    <form id="courseForm">
+      <input type="text" id="courseTitle" placeholder="Course title" required>
+      <input type="text" id="courseInstructor" placeholder="Instructor">
+      <input type="number" id="courseCredits" placeholder="Credits" min="1" max="10">
+      <button type="submit">Add Course</button>
+    </form>
+    <table id="courseTable">
+      <thead><tr><th>ID</th><th>Title</th><th>Instructor</th><th>Credits</th><th></th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Enroll a Student in a Course</h2>
+    <form id="enrollForm">
+      <select id="enrollStudent" required></select>
+      <select id="enrollCourse" required></select>
+      <button type="submit">Enroll</button>
+    </form>
+    <table id="enrollTable">
+      <thead><tr><th>ID</th><th>Student</th><th>Course</th><th>Enrolled On</th><th>Grade</th><th></th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <p>Prototype built with Java 17, Spring Boot 3, Spring Data JPA, H2 — REST API at <code>/api/*</code></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
